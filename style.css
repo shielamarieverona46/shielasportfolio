@@ -148,7 +148,7 @@
  }
 
  /* Running light around the border */
- .avatar::before {
+ /* .avatar::before {
      content: '';
      position: absolute;
      inset: -8px;
@@ -163,13 +163,13 @@
      filter: blur(6px);
      animation: spin 3s linear infinite;
      z-index: 1;
- }
+ } */
 
  /* Optional: a mask to make the gradient a thin ring */
 
 
  /* Animation */
- @keyframes spin {
+ /* @keyframes spin {
      from {
          transform: rotate(0deg);
      }
@@ -177,7 +177,7 @@
      to {
          transform: rotate(360deg);
      }
- }
+ } */
 
  #about p {
      font-size: 16px;
@@ -606,5 +606,6 @@
     letter-spacing: 1px;
     transition: 0.3s ease;
 }
+
 
 
