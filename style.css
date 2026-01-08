@@ -137,8 +137,8 @@
      position: relative;
      z-index: 2;
      border: 5px solid rgba(0, 0, 0, 0.35);
-     box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
-     transition: transform 0.3s ease;
+     /* box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+     transition: transform 0.3s ease; */
  }
 
  .mypic:hover {
@@ -606,6 +606,7 @@
     letter-spacing: 1px;
     transition: 0.3s ease;
 }
+
 
 
 
