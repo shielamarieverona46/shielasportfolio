@@ -206,6 +206,12 @@
                     </div>
                 </div>
             </div>
+            <!-- Image Modal -->
+            <div id="imageModal" class="image-modal">
+                <span class="close-modal">&times;</span>
+                <img class="modal-content" id="modalImage">
+            </div>
+
         </div>
     </div>
 
@@ -309,10 +315,32 @@
         skillsLink.addEventListener('click', (e) => { e.preventDefault(); skillsSection.scrollIntoView({ behavior: 'smooth' }); animateSkills(); });
         const observer = new IntersectionObserver(entries => { entries.forEach(entry => { if (entry.isIntersecting) animateSkills(); }); }, { threshold: 0.2 });
         observer.observe(skillsSection);
+
+
+        // Image modal viewer (full image)
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const closeModal = document.querySelector('.close-modal');
+        
+        // Apply to ALL images inside carousels
+        document.querySelectorAll('.carousel-item img').forEach(img => {
+            img.addEventListener('click', () => {
+                modal.classList.add('show');
+                modalImg.src = img.src;
+            });
+        });
+        
+        // Close modal
+        closeModal.addEventListener('click', () => modal.classList.remove('show'));
+        modal.addEventListener('click', e => {
+            if (e.target === modal) modal.classList.remove('show');
+        });
+
     </script>
 
 </body>
 
 </html>
+
 
 
